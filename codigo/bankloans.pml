@@ -1,4 +1,5 @@
-// Nombres de los alumnos aqui
+//Nicolas Lopez Robleda
+//Lucas Rodriguez Lanza
 
 #define N 3
 #define CAP 10
@@ -33,6 +34,7 @@ active [N] proctype Client() {
             loan[_pid] = loan[_pid] + request;
             printf("C%d got the money %d.   %d:[%d,%d,%d]\n",
                    _pid, request, cash, loan[0], loan[1], loan[2]);
+            request = 0;
             assert(cash + loan[0] + loan[1] + loan[2] == CAP);
         }
         pay: skip;
